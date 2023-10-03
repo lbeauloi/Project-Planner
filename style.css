@@ -1,0 +1,34 @@
+#table {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: auto;
+}
+
+.article {
+  max-width: 340px;
+  height: 400px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carte {
+  width: 300px;
+  height: 400px;
+  background: rgb(0, 31, 57);
+  background: linear-gradient(90deg, rgb(0, 31, 57) 0%, rgb(0, 57, 179) 100%);
+  margin: 20px;
+  border-radius: 20px;
+}
+.carte .title, .carte .textInput {
+  margin: 15px;
+}
+.carte .textInput {
+  width: 88%;
+  max-height: 300px;
+  max-width: 88%;
+  min-width: 88%;
+}/*# sourceMappingURL=style.css.map */
