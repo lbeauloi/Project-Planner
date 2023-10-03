@@ -11,6 +11,16 @@ body header {
   margin: 0;
   background-color: black;
 }
+body header #btn-add {
+  position: relative;
+  left: 1.5rem;
+  top: 1rem;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5%;
+}
 body header nav {
   min-height: 70px;
   display: flex;
@@ -19,13 +29,14 @@ body header nav {
   padding: 0 24px;
 }
 body header nav #nav-menu {
+  position: relative;
+  top: -2.5rem;
   display: flex;
   padding: 1rem;
   margin-right: 1rem;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  gap: 50px;
 }
 body header nav #nav-menu .menu {
   color: white;
@@ -34,6 +45,11 @@ body header nav #nav-menu .menu {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  header {
+    background-color: none;
+  }
+}
 .hamburger {
   display: none;
   cursor: pointer;
