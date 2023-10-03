@@ -1,10 +1,11 @@
 body{
+    background: #000;
     #table{
         padding: 15px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start;
         margin: auto;
+        justify-content: center;
         article{
             max-width: 340px;
             height: 400px;

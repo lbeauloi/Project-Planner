@@ -37,12 +37,15 @@ body header .hamburger {
   border: none;
 }
 
+body {
+  background: #000;
+}
 body #table {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
   margin: auto;
+  justify-content: center;
 }
 body #table article {
   max-width: 340px;
