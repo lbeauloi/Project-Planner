@@ -10,8 +10,8 @@
     max-width: 340px;
     height: 400px;
     box-sizing: border-box;
-   display: flex; /* Ajoutez cette ligne pour activer la mise en page flexible à l'intérieur de chaque carte */
-   flex-direction: column; /* Empêche les éléments enfants de s'étendre horizontalement */
+   display: flex; 
+   flex-direction: column; 
    align-items: center; 
     
 }
@@ -27,7 +27,7 @@
     }
     .textInput{
         width: 88%;
-        max-height: 300px; /* Hauteur maximale que le textarea peut atteindre */
+        max-height: 300px; 
         max-width: 88%;
         min-width: 88%;
         
