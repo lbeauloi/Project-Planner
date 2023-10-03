@@ -1,0 +1,36 @@
+#table{
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: auto;
+    
+}
+.article{
+    max-width: 340px;
+    height: 400px;
+    box-sizing: border-box;
+   display: flex; /* Ajoutez cette ligne pour activer la mise en page flexible à l'intérieur de chaque carte */
+   flex-direction: column; /* Empêche les éléments enfants de s'étendre horizontalement */
+   align-items: center; 
+    
+}
+.carte{
+    width: 300px;
+    height: 400px;
+    background: rgb(0,31,57);
+    background: linear-gradient(90deg, rgba(0,31,57,1) 0%, rgba(0,57,179,1) 100%); 
+    margin: 20px;
+    border-radius: 20px;
+    .title,.textInput{
+        margin: 15px;
+    }
+    .textInput{
+        width: 88%;
+        max-height: 300px; /* Hauteur maximale que le textarea peut atteindre */
+        max-width: 88%;
+        min-width: 88%;
+        
+    }
+}
+
