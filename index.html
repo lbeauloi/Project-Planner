@@ -40,7 +40,7 @@
                     <h2 class="title">To DO</h2>
                     <button class="addtext"> add task</button>
                 </div>
-                <div class="addTxt">
+                <div class="addTxt" draggable="true" ondragstart="drag(event)">
                     <div class="task-container">
                         <label for="dateInput">Task end date:</label>
                         <input type="date" id="userdateInput1">
@@ -84,8 +84,11 @@
         </article>
     </section>
     <!-- card generator end-->
-    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
-    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Doing</div>
-    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
+    <div class='table-to-do'>
+        <div class="dropzone" ondrop="drop(event, 'todo')" ondragover="allowDrop(event)">To Do</div>
+        <div class="dropzone" ondrop="drop(event, 'doing')" ondragover="allowDrop(event)">Doing</div>
+        <div class="dropzone" ondrop="drop(event, 'done')" ondragover="allowDrop(event)">Done</div>
+    </div>
+
 </body>
 </html>

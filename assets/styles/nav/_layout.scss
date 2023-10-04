@@ -1,8 +1,13 @@
 .dropzone {
-    width: 200px;
-    height: 100px;
+    width: 400px;
+    height: 500px;
     background-color: #e74c3c;
     color: white;
     text-align: center;
     line-height: 100px;
+}
+.table-to-do{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
