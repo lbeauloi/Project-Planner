@@ -29,24 +29,32 @@
         transform: translateY(-8px) rotate(-45deg);
     }
     #nav-menu{  
-        position: fixed;
-        right: -100%;
-        top: 0;
+        list-style: none;
+        position: relative;
         flex-direction: column;
-        background-color: rgb(223, 223, 223);
-        width: 10%;
-        height: 30%;
+        justify-content: flex-start;
+        right: -100%;
+        background-color: rgb(68, 68, 68);
+        width: 100px;
+        height: 100%;
         transition: 0.3s;
         padding: 1rem;
-        gap: 30px;
     }
     #nav-menu.active{
+        position: fixed;
         top: 0;
         right: 0;
+        -webkit-box-shadow: -11px 12px 29px 8px rgba(0,0,0,0.36);
+        -moz-box-shadow: -11px 12px 29px 8px rgba(0,0,0,0.36);
+        box-shadow: -11px 12px 29px 8px rgba(0,0,0,0.36);
     }
     .nav-items{
         margin: 0;
     
+    }
+    .menu{
+        font-size: 14px;
+        padding: 10px;
     }
 }
 

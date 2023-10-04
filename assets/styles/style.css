@@ -40,6 +40,7 @@ body header nav #nav-menu {
 }
 body header nav #nav-menu .menu {
   color: white;
+  list-style: none;
   padding: 5px;
   text-decoration: none;
   text-align: center;
@@ -50,6 +51,15 @@ body header nav #nav-menu .menu {
     background-color: none;
   }
 }
+.dropzone {
+  width: 200px;
+  height: 100px;
+  background-color: #e74c3c;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
@@ -81,23 +91,29 @@ body header nav #nav-menu .menu {
     transform: translateY(-8px) rotate(-45deg);
   }
   #nav-menu {
-    position: fixed;
-    right: -100%;
-    top: 0;
+    list-style: none;
+    position: relative;
     flex-direction: column;
-    background-color: rgb(223, 223, 223);
-    width: 10%;
-    height: 30%;
+    justify-content: flex-start;
+    right: -100%;
+    background-color: rgb(68, 68, 68);
+    width: 100px;
+    height: 100%;
     transition: 0.3s;
     padding: 1rem;
-    gap: 30px;
   }
   #nav-menu.active {
+    position: fixed;
     top: 0;
     right: 0;
+    box-shadow: -11px 12px 29px 8px rgba(0, 0, 0, 0.36);
   }
   .nav-items {
     margin: 0;
+  }
+  .menu {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 body {
