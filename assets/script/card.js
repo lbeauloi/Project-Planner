@@ -13,7 +13,7 @@ function createCards() {
   section.appendChild(article);
 }
 
-let addBtn = document.getElementById("add");
+let addBtn = document.getElementById("btn-add");
 addBtn.addEventListener("click", createCards);
 
 let dateInput = document.getElementById("userdateInput");
