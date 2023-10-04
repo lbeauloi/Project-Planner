@@ -1,9 +1,24 @@
 function addTxt(event) {
-  let task = document.createElement("textarea");
-  task.id = "text";
-  task.name = "message";
-  task.className = "textInput";
-  task.placeholder = "Enter your text";
+  let taskContainer = document.createElement("div"); // Crée un conteneur div
+  taskContainer.className = "task-container";
+
+  let dateLabel = document.createElement("label");
+  dateLabel.textContent = "Task end date:";
+  dateLabel.setAttribute("for", "userdateInput1");
+
+  let dateInput = document.createElement("input");
+  dateInput.type = "date";
+  dateInput.id = "userdateInput1";
+
+  let task = document.createElement("p");
+  task.className = "editable-content";
+  task.setAttribute("contenteditable", "true");
+  task.textContent = "Click here to add task"; // Ajoute le texte au paragraphe
+
+  // Ajouter les éléments au conteneur
+  taskContainer.appendChild(dateLabel);
+  taskContainer.appendChild(dateInput);
+  taskContainer.appendChild(task);
 
   // Trouver l'article parent du bouton
   let article = event.target.closest("article");
@@ -11,16 +26,16 @@ function addTxt(event) {
   // Trouver la div avec la classe "addTxt" à l'intérieur de l'article
   let newtextzone = article.querySelector(".addTxt");
 
-  // Ajouter le textarea à la div "addTxt"
-  newtextzone.appendChild(task);
+  // Ajouter le conteneur au div "addTxt"
+  newtextzone.appendChild(taskContainer);
 
   // Désactiver le bouton "addtext"
   event.target.disabled = true;
 
-  // Surveiller les changements dans le textarea
+  // Surveiller les changements dans le paragraphe
   task.addEventListener("input", function () {
-    // Réactiver le bouton si le textarea n'est pas vide
-    event.target.disabled = task.value.trim() === "";
+    // Réactiver le bouton si le paragraphe est vide
+    event.target.disabled = task.textContent.trim() === "";
   });
 }
 
@@ -28,5 +43,6 @@ let addNewTxtBtns = document.querySelectorAll(".addtext");
 addNewTxtBtns.forEach(btn => {
   btn.addEventListener("click", addTxt);
 });
+
 
 
