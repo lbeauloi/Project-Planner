@@ -21,15 +21,25 @@ body{
                 background: linear-gradient(132deg, rgba(0,139,255,1) 25%, rgba(0,57,179,1) 75%); 
                 margin: 20px;
                 border-radius: 20px;
-                .title{
-                    margin: 15px;
-                }
+                .cartfooter{
+                    display: flex;
+                    justify-content: space-between;
+                    .title{
+                        margin: 15px;
+                    } 
+                    .addtext{
+                        margin:8px;
+                        height: 50%;
+                    }  
+                }  
                 .addTxt{
-                    .editable-content {
+                    .task-container{
+                        .editable-content {
                             border: 1px solid #ccc;
                             padding: 5px;
                             cursor: pointer;
-                    }
+                        }
+                    } 
                 }
             }
         }

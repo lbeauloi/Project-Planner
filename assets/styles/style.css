@@ -139,10 +139,18 @@ body #table #card1 .carte, body #table #card2 .carte, body #table #card3 .carte 
   margin: 20px;
   border-radius: 20px;
 }
-body #table #card1 .carte .title, body #table #card2 .carte .title, body #table #card3 .carte .title {
+body #table #card1 .carte .cartfooter, body #table #card2 .carte .cartfooter, body #table #card3 .carte .cartfooter {
+  display: flex;
+  justify-content: space-between;
+}
+body #table #card1 .carte .cartfooter .title, body #table #card2 .carte .cartfooter .title, body #table #card3 .carte .cartfooter .title {
   margin: 15px;
 }
-body #table #card1 .carte .addTxt .editable-content, body #table #card2 .carte .addTxt .editable-content, body #table #card3 .carte .addTxt .editable-content {
+body #table #card1 .carte .cartfooter .addtext, body #table #card2 .carte .cartfooter .addtext, body #table #card3 .carte .cartfooter .addtext {
+  margin: 8px;
+  height: 50%;
+}
+body #table #card1 .carte .addTxt .task-container .editable-content, body #table #card2 .carte .addTxt .task-container .editable-content, body #table #card3 .carte .addTxt .task-container .editable-content {
   border: 1px solid #ccc;
   padding: 5px;
   cursor: pointer;
