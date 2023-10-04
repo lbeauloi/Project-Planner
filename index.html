@@ -33,7 +33,7 @@
     <!-- Header end-->
     <!-- card generator start-->
     <section id="table">
-        <article id="card1">
+        <article id="card1" draggable="true" ondragstart="drag(event)">
             <form class="carte">
                 <h2 class="title">To DO</h2>
                 <div class="addTxt">
@@ -71,10 +71,11 @@
         </article>
     </section>
     <!-- card generator end-->
+    <div class='table-to-do'>
     <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
     <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Doing</div>
     <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
-
+    </div>
 
 </body>
 </html>
