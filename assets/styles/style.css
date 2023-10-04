@@ -132,25 +132,24 @@ body #table {
   margin: auto;
   justify-content: center;
 }
-body #table article {
+body #table #card1, body #table #card2, body #table #card3 {
   max-width: 340px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-body #table article .carte {
+body #table #card1 .carte, body #table #card2 .carte, body #table #card3 .carte {
   width: 300px;
   background: rgb(0, 139, 255);
   background: linear-gradient(132deg, rgb(0, 139, 255) 25%, rgb(0, 57, 179) 75%);
   margin: 20px;
   border-radius: 20px;
 }
-body #table article .carte .title {
+body #table #card1 .carte .title, body #table #card2 .carte .title, body #table #card3 .carte .title {
   margin: 15px;
 }
-body #table article .carte .textInput {
-  width: 88%;
-  max-width: 88%;
-  min-width: 88%;
-  margin: 15px;
+body #table #card1 .carte .addTxt .editable-content, body #table #card2 .carte .addTxt .editable-content, body #table #card3 .carte .addTxt .editable-content {
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -7,7 +7,7 @@ body{
         flex-wrap: wrap;
         margin: auto;
         justify-content: center;
-        article{
+        #card1, #card2, #card3{
             max-width: 340px;
             // height: 400px;
             // box-sizing: border-box;
@@ -24,15 +24,15 @@ body{
                 .title{
                     margin: 15px;
                 }
-                .textInput{
-                    width: 88%;
-                    // max-height: 250px; 
-                    max-width: 88%;
-                    min-width: 88%;
-                    margin: 15px;
+                .addTxt{
+                    .editable-content {
+                            border: 1px solid #ccc;
+                            padding: 5px;
+                            cursor: pointer;
+                    }
                 }
             }
         }
-    }
+    }        
 }
 

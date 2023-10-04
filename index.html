@@ -8,7 +8,8 @@
     <script defer src="./assets/script/hamburger.js"></script>
     <script defer src="./assets/script/card.js"></script>
     <script defer src="./assets/script/dragDrop.js"></script>
-    <script defer src="./assets/script/date.js"></script>
+    <script defer src="./assets/script/editable.js"></script>
+    <!-- <script defer src="./assets/script/date.js"></script> -->
 </head>
 <body>
     <!-- Header start-->
@@ -33,40 +34,40 @@
     <!-- Header end-->
     <!-- card generator start-->
     <section id="table">
-        <article id="card1" draggable="true" ondragstart="drag(event)">
-            <form class="carte">
+        <article id="card1">
+            <div class="carte">
                 <h2 class="title">To DO</h2>
                 <div class="addTxt">
-                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                    <label for="dateInput">Task end date:</label>
+                    <input type="date" id="userdateInput1">
+                    <p class="editable-content" contenteditable="true">Click here to add task</p>
                 </div>
-                <label for="dateInput">Task end date:</label>
-                <input type="date" id="userdateInput1">
-                <p id="result"></p> 
-            </form>
+                <!-- <p id="result"></p> -->
+            </div>
             <button class="addtext"> add txt</button>
-        </article>
+        </article>        
         <article id="card2">
-            <form class="carte">
+            <div class="carte">
                 <h2 class="title">In Progress</h2>
                 <div class="addTxt">
-                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                    <label for="dateInput">Task end date:</label>
+                    <input type="date" id="userdateInput1">
+                    <p class="editable-content" contenteditable="true">Click here to add task</p>
                 </div>
-                <label for="dateInput">Task end date:</label>
-                <input type="date" id="userdateInput2">
-                <p id="result"></p> 
-            </form>
+                <!-- <p id="result"></p> -->
+            </div>
             <button class="addtext"> add txt</button>
         </article>
         <article id="card3">
-            <form class="carte">
+            <div class="carte">
                 <h2 class="title">Done</h2>
                 <div class="addTxt">
-                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                    <label for="dateInput">Task end date:</label>
+                    <input type="date" id="userdateInput1">
+                    <p class="editable-content" contenteditable="true">Click here to add task</p>
                 </div>
-                <label for="dateInput">Task end date:</label>
-                <input type="date" id="userdateInput3">
-                <p id="result"></p> 
-            </form>
+                <!-- <p id="result"></p> -->
+            </div>
             <button class="addtext"> add txt</button>
         </article>
     </section>
