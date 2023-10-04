@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script defer src="./assets/script/hamburger.js"></script>
     <script defer src="./assets/script/card.js"></script>
+    <script defer src="./assets/script/dragDrop.js"></script>
     <script defer src="./assets/script/date.js"></script>
 </head>
 <body>
@@ -70,5 +71,10 @@
         </article>
     </section>
     <!-- card generator end-->
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">Doing</div>
+    <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">To do</div>
+
+
 </body>
 </html>
