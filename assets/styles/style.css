@@ -51,21 +51,6 @@ body header nav #nav-menu .menu {
     background-color: none;
   }
 }
-.dropzone {
-  width: 400px;
-  height: 500px;
-  background-color: #e74c3c;
-  color: white;
-  text-align: center;
-  line-height: 100px;
-}
-
-.table-to-do {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;

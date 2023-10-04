@@ -1,37 +1,40 @@
-function dragStart() {
-    // console.log('Event: ', 'dragstart');
-    dragStartIndex = +this.closest('li').getAttribute('data-index');
+const containers = document.querySelectorAll('.dropzone')
+
+document.addEventListener('dragstart', (e) => {
+  if (e.target.classList.contains('draggable')) {
+    e.target.classList.add('dragging')
   }
-  
-  function dragEnter() {
-    // console.log('Event: ', 'dragenter');
-    this.classList.add('over');
+})
+
+document.addEventListener('dragend', (e) => {
+  if (e.target.classList.contains('draggable')) {
+    e.target.classList.remove('dragging')
   }
-  
-  function dragLeave() {
-    // console.log('Event: ', 'dragleave');
-    this.classList.remove('over');
-  }
-  
-  function dragOver(e) {
-    // console.log('Event: ', 'dragover');
-    e.preventDefault();
-  }
-  
-  function dragDrop() {
-    // console.log('Event: ', 'drop');
-    const dragEndIndex = +this.getAttribute('data-index');
-    swapItems(dragStartIndex, dragEndIndex);
-  
-    this.classList.remove('over');
-  }
-  
-  // Swap list items that are drag and drop
-  function swapItems(fromIndex, toIndex) {
-    const itemOne = listItems[fromIndex].querySelector('.draggable');
-    const itemTwo = listItems[toIndex].querySelector('.draggable');
-  
-    listItems[fromIndex].appendChild(itemTwo);
-    listItems[toIndex].appendChild(itemOne);
-  }
-  
+})
+
+containers.forEach((container) => {
+  container.addEventListener('dragover', (e) => {
+    e.preventDefault()
+    const draggable = document.querySelector('.dragging')
+    const afterElement = getDragAfterElement(container, e.clientY)
+    if (afterElement == null) {
+      container.appendChild(draggable)
+    } else {
+      container.insertBefore(draggable, afterElement)
+    }
+  })
+})
+
+function getDragAfterElement(container, y) {
+  const draggableElements = [...container.querySelectorAll('.draggable:not(.dragging)')]
+
+  return draggableElements.reduce((closest, child) => {
+    const box = child.getBoundingClientRect()
+    const offset = y - box.top - box.height / 2
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child }
+    } else {
+      return closest
+    }
+  }, { offset: Number.NEGATIVE_INFINITY }).element
+}
