@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./assets/styles/style.css">
     <script defer src="./assets/script/hamburger.js"></script>
     <script defer src="./assets/script/card.js"></script>
+    <script defer src="./assets/script/date.js"></script>
 </head>
 <body>
     <!-- Header start-->
     <header>
-        <button id="btn-add">Add a task</button>
+        <!-- <button id="btn-add">Add a task</button> -->
         <nav id="nav-bar">
             <ul id="nav-menu">
                 <li id="nav-items">
@@ -31,7 +32,42 @@
     <!-- Header end-->
     <!-- card generator start-->
     <section id="table">
-        
+        <article id="card1">
+            <form class="carte">
+                <h2 class="title">To DO</h2>
+                <div class="addTxt">
+                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                </div>
+                <label for="dateInput">Task end date:</label>
+                <input type="date" id="userdateInput">
+                <p id="result"></p> 
+            </form>
+            <button class="addtext"> add txt</button>
+        </article>
+        <article id="card2">
+            <form class="carte">
+                <h2 class="title">In Progress</h2>
+                <div class="addTxt">
+                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                </div>
+                <label for="dateInput">Task end date:</label>
+                <input type="date" id="userdateInput">
+                <p id="result"></p> 
+            </form>
+            <button class="addtext"> add txt</button>
+        </article>
+        <article id="card3">
+            <form class="carte">
+                <h2 class="title">Done</h2>
+                <div class="addTxt">
+                <textarea id="text" name="message" class="textInput" placeholder="Enter your text"></textarea>
+                </div>
+                <label for="dateInput">Task end date:</label>
+                <input type="date" id="userdateInput">
+                <p id="result"></p> 
+            </form>
+            <button class="addtext"> add txt</button>
+        </article>
     </section>
     <!-- card generator end-->
 </body>
