@@ -1,29 +1,28 @@
-let dateInputs = document.querySelectorAll("input[type='date']");
-let resultElements = document.querySelectorAll(".carte p");
+function updateDaysRemaining(input) {
+  let card = input.closest(".carte");
+  let resultElement = card.querySelector(".days-remaining");
 
-function daysLeft(index) {
-  let userDate = new Date(dateInputs[index].value);
-  let today = new Date();
-  const differenceInDays = Math.floor(
-    (userDate - today) / (1000 * 60 * 60 * 24) //passer les milliseconde en jour
-  );
-  if (differenceInDays === 0) {
-    resultElements[index].textContent = "End date is today!";
-  } else if (differenceInDays > 0) {
-    resultElements[index].textContent = `${differenceInDays} days remaining.`;
-  } else {
-    resultElements[
-      index
-    ].textContent = `The selected date has passed ${-differenceInDays} days.`;
+  if (input) {
+    let userDate = new Date(input.value);
+    let today = new Date();
+    const differenceInDays = Math.floor(
+      (userDate - today) / (1000 * 60 * 60 * 24) // on passe en jour et pas milliseconde
+    );
+
+    if (differenceInDays === 0) {
+      resultElement.textContent = "End date is today!";
+    } else if (differenceInDays > 0) {
+      resultElement.textContent = `${differenceInDays} days remaining.`;
+    } else {
+      resultElement.textContent = `The selected date has passed ${-differenceInDays} days.`;
+    }
   }
 }
 
-function inputEventListener(input, index) {
-  input.addEventListener("input", function () {
-    daysLeft(index);
-  });
-}
+let projectContainer = document.getElementById("table");
 
-dateInputs.forEach(function (input, index) {
-  inputEventListener(input, index);
+// eventlistener pour gérer les événements input sur toutes les taches de projet
+projectContainer.addEventListener("input", function (event) {
+  let target = event.target;
+  updateDaysRemaining(target);
 });
