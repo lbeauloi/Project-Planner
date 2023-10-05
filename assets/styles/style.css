@@ -320,11 +320,6 @@ body header nav #nav-menu .menu {
     width: 100%;
   }
 }
-@media (max-width: 768px) {
-  .background {
-    width: 100%;
-  }
-}
 body h2 {
   color: white;
   display: flex;
