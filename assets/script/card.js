@@ -4,7 +4,7 @@ function addTxt(event) {
   taskContainer.draggable = "true"
 
   let dateLabel = document.createElement("label");
-  dateLabel.textContent = "Task end date:";
+  dateLabel.textContent = "Task end date";
   dateLabel.id = "labDate";
   dateLabel.setAttribute("for", "userdateInput1");
 
