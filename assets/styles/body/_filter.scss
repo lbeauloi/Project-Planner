@@ -1,0 +1,36 @@
+body {
+    .filter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+  
+      .FilterIcon {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+  
+        input[type="radio"] {
+          display: none; /* Masquer le bouton radio */
+        }
+  
+        label {
+          margin-left: 8px; /* Espace entre l'icône et le texte */
+        }
+  
+        svg {
+          width: 24px; /* Ajustez la taille de l'icône selon vos besoins */
+          height: 24px;
+          fill: #000; /* Couleur de l'icône */
+          /* Ajoutez d'autres styles selon vos besoins */
+        }
+  
+        /* Style du label lorsqu'il est coché */
+        input[type="radio"]:checked + label {
+          font-weight: bold; /* Par exemple, mettez en gras le texte lorsque le bouton radio est coché */
+        }
+      }
+    }
+  }
+  
