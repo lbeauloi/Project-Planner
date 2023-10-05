@@ -4,7 +4,7 @@ function addTxt(event) {
   taskContainer.draggable = "true"
 
   let dateLabel = document.createElement("label");
-  dateLabel.textContent = "Task end date:";
+  dateLabel.textContent = "Task end date";
   dateLabel.id = "labDate";
   dateLabel.setAttribute("for", "userdateInput1");
 
@@ -15,7 +15,7 @@ function addTxt(event) {
   let task = document.createElement("p");
   task.className = "editable-content";
   task.setAttribute("contenteditable", "true");
-  task.textContent = "Click here to add"; // Ajoute le texte au paragraphe
+  task.textContent = "Add task"; // Ajoute le texte au paragraphe
 
   // Ajouter les éléments au conteneur
   taskContainer.appendChild(dateLabel);
