@@ -1,9 +1,11 @@
 function addTxt(event) {
   let taskContainer = document.createElement("div"); // Crée un conteneur div
-  taskContainer.className = "task-container";
+  taskContainer.className = "task-container draggable";
+  taskContainer.draggable = "true"
 
   let dateLabel = document.createElement("label");
   dateLabel.textContent = "Task end date:";
+  dateLabel.id = "labDate";
   dateLabel.setAttribute("for", "userdateInput1");
 
   let dateInput = document.createElement("input");
@@ -43,6 +45,4 @@ let addNewTxtBtns = document.querySelectorAll(".addtext");
 addNewTxtBtns.forEach(btn => {
   btn.addEventListener("click", addTxt);
 });
-
-
 

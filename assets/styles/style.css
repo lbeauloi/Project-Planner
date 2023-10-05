@@ -132,6 +132,7 @@ body header nav #nav-menu .menu {
   justify-content: space-between;
 }
 #table #card1 .carte .cartfooter .title, #table #card2 .carte .cartfooter .title, #table #card3 .carte .cartfooter .title {
+  color: white;
   margin: 15px;
 }
 #table #card1 .carte .cartfooter .addtext, #table #card2 .carte .cartfooter .addtext, #table #card3 .carte .cartfooter .addtext {
@@ -141,7 +142,16 @@ body header nav #nav-menu .menu {
 #table #card1 .carte .addTxt .task-container .editable-content, #table #card2 .carte .addTxt .task-container .editable-content, #table #card3 .carte .addTxt .task-container .editable-content {
   border: 1px solid #ccc;
   padding: 5px;
+  color: white;
   cursor: pointer;
+}
+#table #card1 .carte .addTxt .dropHere, #table #card2 .carte .addTxt .dropHere, #table #card3 .carte .addTxt .dropHere {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+#table #card1 .carte .addTxt #labDate, #table #card2 .carte .addTxt #labDate, #table #card3 .carte .addTxt #labDate {
+  color: white;
 }
 
 @keyframes animate {
