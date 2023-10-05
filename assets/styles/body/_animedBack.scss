@@ -106,3 +106,8 @@
     bottom: -187px;
     animation-delay: 3s;
 }
+@media (max-width: 768px){
+    .background{
+        width: 100%;
+    }
+}

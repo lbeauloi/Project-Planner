@@ -87,8 +87,8 @@ body header nav #nav-menu .menu {
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
-    right: -100%;
-    background-color: rgb(68, 68, 68);
+    right: 100%;
+    background-color: rgb(0, 0, 0);
     width: 100px;
     height: 100%;
     transition: 0.3s;
@@ -133,6 +133,7 @@ body header nav #nav-menu .menu {
   justify-content: space-between;
 }
 #table #card1 .carte .cartfooter .title, #table #card2 .carte .cartfooter .title, #table #card3 .carte .cartfooter .title {
+  color: white;
   margin: 15px;
 }
 #table #card1 .carte .cartfooter .addtext, #table #card2 .carte .cartfooter .addtext, #table #card3 .carte .cartfooter .addtext {
@@ -142,7 +143,16 @@ body header nav #nav-menu .menu {
 #table #card1 .carte .addTxt .task-container .editable-content, #table #card2 .carte .addTxt .task-container .editable-content, #table #card3 .carte .addTxt .task-container .editable-content {
   border: 1px solid #ccc;
   padding: 5px;
+  color: white;
   cursor: pointer;
+}
+#table #card1 .carte .addTxt .dropHere, #table #card2 .carte .addTxt .dropHere, #table #card3 .carte .addTxt .dropHere {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+#table #card1 .carte .addTxt #labDate, #table #card2 .carte .addTxt #labDate, #table #card3 .carte .addTxt #labDate {
+  color: white;
 }
 
 @keyframes animate {
@@ -289,4 +299,10 @@ body .filter .FilterIcon svg {
 }
 body .filter .FilterIcon input[type=radio]:checked + label {
   font-weight: bold; /* Par exemple, mettez en gras le texte lorsque le bouton radio est coché */
+}
+
+@media (max-width: 768px) {
+  .background {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

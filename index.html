@@ -12,6 +12,7 @@
     <script defer src="./assets/script/dragDrop.js"></script>
     <script defer src="./assets/script/editable.js"></script>
     <script defer src="./assets/script/date.js"></script>
+    <script defer src="./assets/script/storage.js"></script>
     <!-- script -->
 </head>
 <body>
@@ -59,11 +60,12 @@
                 </div>
                 <div class="addTxt dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <div class="task-container draggable" draggable="true">
-                        <label for="dateInput">Task end date:</label>
+                        <label for="dateInput" id="labDate">Task end date:</label>
                         <input type="date" id="userdateInput1">
                         <p class="editable-content" contenteditable="true">Click here to add task</p>
                         <p class="days-remaining"></p> <!--p pour afficher les jours restants -->
                     </div>
+                    <p class="dropHere">Drop me here !</p>
                 </div>
                 <!-- <p id="result"></p> -->
             </div>
@@ -73,10 +75,8 @@
                 <div class="cartfooter">
                     <h2 class="title">In Progress</h2>
                 </div>
-                <div class="addTxt dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="task-container  draggable" draggable="true">
-
-                    </div>
+                <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="dropHere">Drop me here !</p>
                 </div>
                 <!-- <p id="result"></p> -->
             </div>
@@ -86,10 +86,8 @@
                 <div class="cartfooter">
                     <h2 class="title">Done</h2>
                 </div>
-                <div class="addTxt dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <div class="task-container draggable" draggable="true">
-
-                    </div>
+                <div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <p class="dropHere">Drop me here !</p>
                 </div>
                 <!-- <p id="result"></p> -->
             </div>
