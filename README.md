@@ -18,13 +18,12 @@ This project is a project planner that allows users to create tasks and filter t
 - [Lucas Beauloi](https://github.com/lbeauloi)
 - [Mathias Barbier](https://github.com/PAZTEK1007)
 
-## Difficulties
 
-- It's was my first time at project manager and it was a bit difficult to manage the project and the team.
-- we want to go to far in the project and we didn't have the knowledge to do what we wanted.
-- We didn't have the time to do everything we wanted.
-- We lost a lot of time on the drag and drop.
-
-## Deployed version
+## Project Link
 
 [Project Planner](https://alexandrevdw.github.io/project-planner/)
+
+## Badges
+HTML5 	![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+SASS 	![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+JavaScript 	![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
